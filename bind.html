@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Vue js introduction</title>
-  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-  
-	</head>
+	<title>Assign attributes to html tag</title>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+</head>
 <body>
-<div id="intro" style="text-align: center;">
-	<div v-html="htmlcontent"></div>
+<div id="bind">
+	<img v-bind:src="imgsrc" width="500px" height="500px"/>
+
 </div>
 <script type="text/javascript">
 	var vm=new Vue({
-		el: '#intro',
-		data:{
-			htmlcontent: '<div><h3>ishnai udara</h3></div>'
+		el: '#bind',
+		data: {
+			imgsrc:"img1.jpg"
 		}
-
 	});
 </script>
 </body>
