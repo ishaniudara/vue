@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue js with methods</title>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+  
+</head>
+<body>
+<div id="meth" style="text-align:center;">
+	<h3>first name:{{firstname}}</h3>
+	<h3>Last name:{{lastname}}</h3>
+	<h3>{{details()}}</h3>
+</div>
+<script type="text/javascript">
+	var vm=new Vue({
+		el: '#meth',
+		data: {
+			firstname:'ishani',
+			lastname:'udara',
+			address:'matara'
+		},
+		methods:{
+			details:function(){
+				return "I am "+this.firstname +""+ this.lastname;			}
+		}
+	});
+</script>
+</body>
+</html>
