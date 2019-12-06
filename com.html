@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>components</title>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<div id="component_test">
+	<testcomponent></testcomponent>
+</div>
+<div id="component_test1">
+	<testcomponent></testcomponent>
+</div>
+<script type="text/javascript">
+Vue.component('testcomponent',{
+	template: '<div><h1>Ishani udara</h1></div>'
+});
+
+	var vm=new Vue({
+		el: '#component_test'
+	});
+	var vm1=new Vue({
+		el: '#component_test1'
+	});
+</script>
+</body>
+</html>
