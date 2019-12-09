@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dynamic binding</title>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<div id="databinding">
+	<component v-bind:is="view">
+	</component>
+</div>
+<script type="text/javascript">
+	var vm = new Vue({
+   el: '#databinding',
+   data: {
+      view: 'component1'
+   },
+   components: {
+      'component1': {
+         template: '<div><span style = "font-size:25;color:red;">Dematapassa vithanage Ishani udara</span></div>'
+      }
+   }
+});
+</script>
+</body>
+</html>
