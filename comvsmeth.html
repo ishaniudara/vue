@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>computed vs method</title>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<div id="meth">
+	<h3 style="background-color: gray;">Random number from method: {{getmeth()}}</h3>
+	<h3 style="background-color: gray;">Random number from method: {{getmeth()}}</h3>
+	<h3 style="background-color: gray;">Random number from computed: {{getcom}}</h3>
+	<h3 style="background-color: gray;">Random number from computed: {{getcom}}</h3>
+</div>
+<script type="text/javascript">
+	var vm=new Vue({
+		el:'#meth',
+		methods:{
+			getmeth: function(){
+				return Math.random();
+			}
+		},
+		computed: {
+			getcom:function(){
+				return Math.random();
+			}
+		}
+	});
+</script>
+</body>
+</html>
