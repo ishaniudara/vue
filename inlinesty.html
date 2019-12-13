@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inline Styles</title>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+</head>
+<body>
+<div id="inlinebind">
+	<div v-bind:style="{color:activecolor, fontsize:font +'px'}">
+		{{title}}
+	</div>
+	
+
+</div>
+<script type="text/javascript">
+	var vm=new Vue({
+		el :'#inlinebind',
+		data:{
+			title:"Inline styles in vue.js",
+			title1:"Ishani udara",
+			activecolor:'red',
+			font:'50',
+					}
+		
+	});
+</script>
+</body>
+</html>

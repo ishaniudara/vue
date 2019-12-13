@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>components</title>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<div id="component_test">
+	<testcomponent></testcomponent>
+</div>
+
+<script type="text/javascript">
+
+
+	var vm = new Vue({
+   el: '#component_test',
+   components:{
+      'testcomponent': {
+         template : '<div><h1>This is coming from component</h1></div>'
+      }
+   }
+});
+
+</script>
+</body>
+</html>

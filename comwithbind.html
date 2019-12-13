@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>class inside components binding
+	</title>
+	 <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+</head>
+<body>
+<style>
+	  <style>
+         .info {
+            color: #00529B;
+            background-color: #BDE5F8;
+         }
+       
+         .active {
+            color: #4F8A10;
+            background-color: #DFF2BF;
+         }
+         .displayError{
+            color: #D8000C;
+            background-color: #FFBABA;
+         }
+      </style>
+      <div id = "classbinding">
+         <new_component class = "active"></new_component>
+      </div>
+      <script type = "text/javascript">
+         var vm = new Vue({
+            el: '#classbinding',
+            data: {
+               title : "This is class binding example",
+               infoclass : 'info',
+               errorclass : 'displayError',
+               isActive : false,
+               haserror : true
+            },
+            components:{
+               'new_component' : {
+                  template : '<div class = "displayError">Class Binding for component</div>'
+               }
+            }
+         });
+         </script>
+</body>
+</html>
