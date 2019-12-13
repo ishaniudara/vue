@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>modifiers in vue.ls</title>
+	 <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+</head>
+<body>
+<div id="modi">
+	<h3 style="color:red;">Enter age</h3><input v-model.number="age" type="number"/>
+	<h3 style="color:red;">Enter name</h3><input v-model.lazy="name" />
+	<h3>Display Name : {{name}}</h3>
+	<h3 style="color:red;">Enter message</h3><input v-model.trim="message"/>
+	<h3>Display Message : {{message}}</h3>
+</div>
+<script type="text/javascript">
+	var vm=new Vue({
+		el:'#modi',
+		data:{
+			age:0,
+			name:"",
+			message:""
+
+		}
+	});
+</script>
+</body>
+</html>
