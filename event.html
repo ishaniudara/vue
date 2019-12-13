@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>events</title>
+	 <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+</head>
+<body>
+<div id="event">
+	<button v-on:click="calculate">Click</button>
+	<h5>Add numbers 100+200={{total}}</h5>
+
+</div>
+<script type="text/javascript">
+	var vm=new Vue({
+		el:'#event',
+		data:{
+			num1:100,
+			num2:200,
+			total:''
+
+		},
+		methods:{
+			calculate: function(event){
+				console.log(event);
+				return this.total=this.num1 +this.num2;
+			}
+		}
+	});
+</script>
+</body>
+</html>
