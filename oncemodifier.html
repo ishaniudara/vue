@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>once modifier</title>
+	 <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+</head>
+<body>
+<div id="onmod">
+	<button v-bind:style="styleobj" v-on:click.once="method1">click</button>
+	<h5>{{clicknum1}}</h5>
+	<button v-bind:style="styleobj" v-on:click="method2">click</button>
+	<h5>{{clicknum2}}</h5>
+</div>
+<script type="text/javascript">
+	var vm = new Vue({
+            el: '#onmod',
+            data: {
+            	clicknum1 : 0,
+            	clicknum2 : 0,
+             styleobj:{
+             	color:'red',
+             	backgroundColor:'blue'
+
+             }
+
+            },
+            methods:{
+            	method1:function(){
+            		return this.clicknum1++;
+            	},
+            	method2:function(){
+            		return this.clicknum2++;
+            	}
+
+            }
+         });
+</script></body>
+</html>
