@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>event-key modifiers</title>
+		 <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<div id="key">
+	<input type="text" placeholder="enter name" v-on:keyup.enter="showvalue"/>
+	<h3>{{name}}</h3>
+</div>
+<script type="text/javascript">
+	var vm=new Vue({
+		el:'#key',
+		data:{
+			name:''
+		},
+			methods:{
+				showvalue:function(event){
+					return this.name=event.target.value;
+				
+			}
+		}
+	});
+</script>
+</body>
+</html>
